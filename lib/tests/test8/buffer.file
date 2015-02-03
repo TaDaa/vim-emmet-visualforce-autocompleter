@@ -1,0 +1,5 @@
+
+<c
+apex:page[test="<[test]"]
+/*<apex:page test="test">*/
+/*</apex:page>*/
