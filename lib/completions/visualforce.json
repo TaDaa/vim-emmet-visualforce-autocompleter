@@ -938,7 +938,24 @@
 		}
 	},
     "apex:component" : {
-        "simple" : false
+        "simple" : false,
+        "attributes" : {
+            "action" : {
+				"type" : "ApexPages.Action"
+            },
+			"controller" : {
+				"type" : "String"
+			},
+			"id" : {
+				"type" : "String"
+			},
+			"name" : {
+				"type" : "String"
+			},
+			"renderAs" : {
+				"type" : "String"
+			}
+        }
     },
     "apex:attribute" : {
         "simple" : false,
