@@ -1,10 +1,19 @@
-from HTMLParser import HTMLParser
+import sys
+is_v3 = False
+if (sys.version_info > (3, 0)):
+    is_v3 = True
+if is_v3:
+    from html.parser import HTMLParser
+else:
+    from HTMLParser import HTMLParser
+
 import sortlist
 
 _lambda_name_getter = lambda x:x['name']
 
 class Parser(HTMLParser):
     def __init__(self):
+        self.convert_charrefs = True
         self.tags = []
         self.name = ''
         self.symbols = sortlist.SortList([],_lambda_name_getter)
